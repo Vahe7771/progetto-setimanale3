@@ -501,7 +501,12 @@ addClass();
   ***
 
 */
-
+function halfTree(height) {
+  for (let i = 0; i < height; i++) {
+    console.log("*".repeat(i));
+  }
+}
+halfTree(3);
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -517,5 +522,22 @@ addClass();
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+function isItPrime(num) {
+  function isItPrime(num) {
+    // Un numero minore di 2 non è primo
+    if (num <= 1) {
+        return false;
+    }
 
+    // Controlliamo se num è divisibile per qualche numero da 2 a sqrt(num)
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false; // Trovato un divisore, quindi non è primo
+        }
+    }
+    
+    return true; // Non ci sono divisori, quindi è primo
+}
+}
+console.log(isItPrime(7));
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
